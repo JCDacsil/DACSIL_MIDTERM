@@ -1,0 +1,167 @@
+body {
+margin: 0;
+height: 100%;
+font-family: sans-serif;
+}
+
+.center {
+width: 800px;
+margin: auto;
+}
+
+.click {
+color: rgb(79, 154, 189);
+text-decoration: none;
+font-size: 13px;
+padding: 10px;
+width: 500px;
+font-size: 15px;
+}
+
+.click:hover {
+font-size: medium;
+color: brown;
+}
+
+.topics {
+width: 200px;
+padding: 5px;
+list-style: none;
+}
+
+.no-dot {
+text-decoration: none;
+list-style-type: none;
+}
+
+
+h1::after {
+content: "TOP";
+background-color: orange;
+font-size: 13px;
+font-weight: bold;
+position: absolute;
+padding: 1px 2px;
+color: black;
+}
+
+.nav-topics {
+border-top: 3px solid #1098AD;
+border-bottom: 3px solid #1098AD;
+background-color: #F5F5F5;
+}
+.hot::after {
+    content: "HOT";
+    background-color: orange;
+    font-size: 13px;
+    font-weight: bold;
+    position: absolute;
+    padding: 1px 2px;
+    color: black;
+    }
+
+.container {
+width: 600px;
+margin-left: 300px;
+margin-right: 300px;
+padding: 10px;
+}
+
+@keyframes shake {
+25% {
+transform: rotate(calc(var(--angle) * -1));
+}
+
+50% {
+transform: rotate(var(--angle));
+}
+
+100% {
+transform: rotate(0deg);
+}
+}
+
+h1 {
+font-weight: 100;
+}
+
+.display {
+display: grid;
+grid-template-columns: 50% 50%;
+gap: 0.1em;
+}
+
+.HOVER {
+--width: 100%;
+--time: 0.7s;
+
+position: relative;
+display: inline-block;
+height: 100%;
+padding: 1em;
+
+color: white;
+background: #222;
+overflow: hidden;
+}
+
+.HOVER text {
+position: relative;
+z-index: 5;
+
+transition: color var(--time);
+}
+
+.HOVER:hover text {
+color: #222;
+}
+
+.HOVER span {
+position: absolute;
+display: block;
+content: "";
+z-index: 0;
+width: 0;
+height: 0;
+
+border-radius: 100%;
+background: #fff;
+
+transform: translate(-50%, -50%);
+transition: width var(--time), padding-top var(--time);
+}
+
+.HOVER:hover span {
+width: calc(var(--width) * 2.25);
+padding-top: calc(var(--width) * 2.25);
+}
+
+/*.HOVER.FLASH:hover text {
+color: white;
+}*/
+
+/*.HOVER.FLASH span {
+background: #ff3b3b;
+}*/
+
+.animated {
+--angle: 5deg;
+animation: shake 0.3s;
+}
+
+.link{
+position: absolute;
+right: 10px;
+bottom: 10px;
+
+font-size: 1rem;
+}
+
+a {
+text-decoration: none;
+color: #1098AD;
+}
+
+a:hover, a:active {
+color: red;
+}
